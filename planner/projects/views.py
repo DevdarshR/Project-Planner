@@ -197,6 +197,8 @@ class TaskRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
   
   serializer_class = TaskSerializer
 
+  http_method_names = ['get','patch','delete']
+
   permission_classes = [JWTAuthentication]
 
   def get_permissions(self):
